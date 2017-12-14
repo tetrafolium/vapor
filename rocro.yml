@@ -3,60 +3,67 @@ inspecode:
   csscomb:              ## for CSS
     auto-fix: true
     thresholds:
-      num-issues: 999
+      num-issues: 1
 
   csslint:              ## for CSS
     thresholds:
-      num-issues: 999
+      num-issues: 15
 
   grep:                 ## for any-languages
     thresholds:
-      num-issues: 999
+      num-issues: 6
 
   htmlhint:             ## for HTML
     thresholds:
-      num-issues: 999
+      num-issues: 0
 
   jshint:               ## for HTML
     thresholds:
-      num-issues: 999
+      num-issues: 0
 
   markdownlint:         ## for Markdown
     thresholds:
-      num-issues: 999
+      num-issues: 376
 
   misspell:             ## for any-languages
     auto-fix: true
     thresholds:
-      num-issues: 999
+      num-issues: 4
 
   phpcs:                ## for CSS
     auto-fix: true
     thresholds:
-      num-issues: 999
+      num-issues: 39
 
   prettier:             ## for CSS
     auto-fix: true
     thresholds:
-      num-issues: 999
+      num-issues: 1
 
   scss-lint:            ## for CSS
     thresholds:
-      num-issues: 999
+      num-issues: 0
 
   shellcheck:           ## for Shell
     thresholds:
-      num-issues: 999
+      num-issues: 16
 
   tailor:               ## for Swift
+  - options:
+      --except:
+      - trailing-whitespace   # (1437 issues)
     thresholds:
-      num-issues: 999
+      num-issues: 376
+  - ignore:
+    - Sources/Vapor/Content/MediaType.swift   # (965 issues)
+    thresholds:
+      num-issues: 848
 
   tidy:                 ## for HTML
     auto-fix: true
     thresholds:
-      num-issues: 999
+      num-issues: 0
 
   unused:               ## for Shell
     thresholds:
-      num-issues: 999
+      num-issues: 0
