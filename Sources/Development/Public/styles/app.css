@@ -32,7 +32,7 @@ div.wrapper {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
-	margin-top: -25px; //adjust eye level
+	margin-top: -25px; /* adjust eye level */
 }
 
 h1#logo {
