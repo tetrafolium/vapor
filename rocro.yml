@@ -51,9 +51,10 @@ inspecode:
   tailor:               ## for Swift
   - options:
       --except:
-      - trailing-whitespace   # (1437 issues)
+      - trailing-whitespace     # (1437 issues)
+      - function-whitespace     # ( 278 issues)
     thresholds:
-      num-issues: 376
+      num-issues: 98
   - ignore:
     - Sources/Vapor/Content/MediaType.swift   # (965 issues)
     thresholds:
