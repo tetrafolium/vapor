@@ -50,9 +50,10 @@ inspecode:
 
   tailor:               ## for Swift
   - options:
-      --except:
-      - trailing-whitespace     # (1437 issues)
-      - function-whitespace     # ( 278 issues)
+      #--except:
+      #- trailing-whitespace     # (1437 issues)
+      #- function-whitespace     # ( 278 issues)
+      --except: 'trailing-whitespace,function-whitespace'
     thresholds:
       num-issues: 98
   - ignore:
@@ -63,7 +64,7 @@ inspecode:
   tidy:                 ## for HTML
     auto-fix: true
     thresholds:
-      num-issues: 0
+      num-issues: 2
 
   unused:               ## for Shell
     thresholds:
