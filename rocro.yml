@@ -36,6 +36,8 @@ inspecode:
       num-issues: 39
 
   prettier:             ## for CSS
+    options:
+      --use-tabs
     auto-fix: true
     thresholds:
       num-issues: 1
@@ -46,14 +48,19 @@ inspecode:
 
   shellcheck:           ## for Shell
     thresholds:
-      num-issues: 16
+      num-issues: 17
 
   swiftlint:
-    #options:
-    #  --enable-all-rule
+    options:
+      --enable-all-rule
     auto-fix: true
     thresholds:
       num-issues: 999
+        # with no options:
+        #    261  num-issues
+        #   1718  issues (reported)
+        #   1641  warnings
+        #     78  errors
 
   tailor:               ## for Swift
   - options:
