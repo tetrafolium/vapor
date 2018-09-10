@@ -52,7 +52,7 @@ inspecode:
 
   swiftlint:
     options:
-      --enable-all-rule
+      --enable-all-rules
     auto-fix: true
     thresholds:
       num-issues: 999
