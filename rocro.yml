@@ -48,14 +48,19 @@ inspecode:
     thresholds:
       num-issues: 16
 
+  swiftlint:
+    #options:
+    #  --enable-all-rule:
+    auto-fix: true
+    thresholds:
+      num-issues: 999
+
   tailor:               ## for Swift
   - options:
       --except:
-      - trailing-whitespace     # (1437 issues)
-      #- function-whitespace     # ( 278 issues)
+      - trailing-whitespace:    # (1437 issues)
     thresholds:
       num-issues: 376
-      #num-issues: 98
   - ignore:
     - Sources/Vapor/Content/MediaType.swift   # (965 issues)
     thresholds:
