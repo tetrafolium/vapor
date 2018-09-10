@@ -50,7 +50,7 @@ inspecode:
 
   swiftlint:
     #options:
-    #  --enable-all-rule:
+    #  --enable-all-rule
     auto-fix: true
     thresholds:
       num-issues: 999
@@ -58,7 +58,7 @@ inspecode:
   tailor:               ## for Swift
   - options:
       --except:
-      - trailing-whitespace:    # (1437 issues)
+      - trailing-whitespace     # (1437 issues)
     thresholds:
       num-issues: 376
   - ignore:
