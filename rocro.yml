@@ -31,7 +31,7 @@ inspecode:
       num-issues: 4
 
   phpcs:                ## for CSS
-    auto-fix: true
+    auto-fix: false
     thresholds:
       num-issues: 39
 
