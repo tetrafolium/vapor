@@ -7,7 +7,7 @@ inspecode:
 
   csslint:              ## for CSS
     thresholds:
-      num-issues: 15
+      num-issues: 14
 
   grep:                 ## for any-languages
     thresholds:
@@ -24,7 +24,7 @@ inspecode:
   markdownlint:         ## for Markdown
     options:
     thresholds:
-      num-issues: 376
+      num-issues: 316
 
   misspell:             ## for any-languages
     auto-fix: true
@@ -55,7 +55,8 @@ inspecode:
     # config-file: .swiftlint.yml (auto-detect)
     auto-fix: true
     thresholds:
-      num-issues: 999
+      num-issues: 160
+        # NOTE: Found 224 violations, 16 serious in 183 files.
 
   tailor:               ## for Swift
     options:
