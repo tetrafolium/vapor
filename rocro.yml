@@ -57,15 +57,12 @@ inspecode:
       num-issues: 999
 
   tailor:               ## for Swift
-  - options:
+    options:
       --except:
-      - trailing-whitespace     # (1437 issues)
+      - trailing-whitespace     # 1437 issues
+      - function-whitespace     #  278 issues
     thresholds:
-      num-issues: 376
-  - ignore:
-    - Sources/Vapor/Content/MediaType.swift   # (965 issues)
-    thresholds:
-      num-issues: 848
+      num-issues: 98
 
   tidy:                 ## for HTML
     auto-fix: true
