@@ -1,2 +1,4 @@
 inspecode:
-  swiftlint: default
+  swiftlint:
+    options:
+      --enable-all-rules
