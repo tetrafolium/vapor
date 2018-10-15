@@ -29,7 +29,7 @@ inspecode:
   misspell:             ## for any-languages
     auto-fix: true
     thresholds:
-      num-issues: 4
+      num-issues: 3
 
   phpcs:                ## for CSS
     auto-fix: false
