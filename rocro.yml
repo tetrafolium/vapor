@@ -55,9 +55,7 @@ inspecode:
     # config-file: .swiftlint.yml (auto-detect)
     auto-fix: true
     thresholds:
-      num-issues: 160
-        # NOTE: Found 224 violations, 16 serious in 183 files.
-        # NOTE: fix above probram by tractrix/codelift-plugins#1032
+      num-issues: 224
 
   tailor:               ## for Swift
     options:
