@@ -32,9 +32,12 @@ inspecode:
       num-issues: 3
 
   phpcs:                ## for CSS
+    options:
+      --exclude:
+      - TabsUsed    # 39 issues
     auto-fix: false
     thresholds:
-      num-issues: 39
+      num-issues: 0
 
   prettier:             ## for CSS HTML JavaScript Markdown TypeScript
     options:
