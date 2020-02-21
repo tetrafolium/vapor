@@ -2,24 +2,24 @@
 
 People have built some awesome things with Vapor, and we can't wait to see what you add to the list! All projects listed here are live and hosted on the cloud. Please report any links that are no longer active.
 
-* [PDX Cocoaheads Website](#pdx-cocoaheads) - The pdx cocoaheads.com site
-* [Vapor Chat](#vapor-chat) - realtime chat site / iOS app
-* [Qutheory.io](#qutheoryio) - the official Vapor site
-* [Byte Fish](#byte-fish) - url shortener
-* [galax.io](#galaxio) - online multiplayer space game
-* [Vapor Dashboard](#vapor-dashboard) - realtime Vapor stats
-* [Starred Search](#starred-search) - search the readme files of starred github repos
-* [Emergency Numbers](#emergency-numbers-api) - an api providing the emergency number for various locations
-* [Slack Bot](#slack-bot) - a basic realtime slackbot
-* [Vapor Example](#vapor-example) - an up to date example project
-* [SwiftyBeaver](#vapor-example) - the website of SwiftyBeaver
-* [Loyalty Backend](#loyalty-backend-sample) - simple loyalty backend system
-* [SwiftyBot](#swiftybot) - a simple Telegram bot
-* [TinyFaces](#tinyfaces) - an api with random avatars that can be used by designers in their designs
-* [Geobot](#geobot) - a simple chat bot built using Wit.ai and Vapor
-* [HomeKitty](#homekitty) - a crowdsourced HomeKit database
-* [ServerSideSwift.racing](#serversideswiftracing) - growth statistics on popular server-side swift frameworks
-* [Vapor.berlin](#vaporberlin) - website to create and vote topics for the VaporBerlin meetup
+- [PDX Cocoaheads Website](#pdx-cocoaheads) - The pdx cocoaheads.com site
+- [Vapor Chat](#vapor-chat) - realtime chat site / iOS app
+- [Qutheory.io](#qutheoryio) - the official Vapor site
+- [Byte Fish](#byte-fish) - url shortener
+- [galax.io](#galaxio) - online multiplayer space game
+- [Vapor Dashboard](#vapor-dashboard) - realtime Vapor stats
+- [Starred Search](#starred-search) - search the readme files of starred github repos
+- [Emergency Numbers](#emergency-numbers-api) - an api providing the emergency number for various locations
+- [Slack Bot](#slack-bot) - a basic realtime slackbot
+- [Vapor Example](#vapor-example) - an up to date example project
+- [SwiftyBeaver](#vapor-example) - the website of SwiftyBeaver
+- [Loyalty Backend](#loyalty-backend-sample) - simple loyalty backend system
+- [SwiftyBot](#swiftybot) - a simple Telegram bot
+- [TinyFaces](#tinyfaces) - an api with random avatars that can be used by designers in their designs
+- [Geobot](#geobot) - a simple chat bot built using Wit.ai and Vapor
+- [HomeKitty](#homekitty) - a crowdsourced HomeKit database
+- [ServerSideSwift.racing](#serversideswiftracing) - growth statistics on popular server-side swift frameworks
+- [Vapor.berlin](#vaporberlin) - website to create and vote topics for the VaporBerlin meetup
 
 # PDX Cocoaheads
 
@@ -174,9 +174,11 @@ The website of SwiftyBeaver, the logging platform for Swift, is powered by Vapor
 Swift Vapor backend solution which won the 1st [appculture](https://github.com/appculture) hackathon (goal was to make a simple Loyalty backend with admin frontend + client mobile app).
 
 ### GitHub
+
 [Source](https://github.com/appculture/LoyaltyBackend-SwiftVapor)
 
 ### Site
+
 [Demo](https://royalty-loyalty.herokuapp.com)
 
 # SwiftyBot
@@ -184,9 +186,11 @@ Swift Vapor backend solution which won the 1st [appculture](https://github.com/a
 A simple Telegram & Facebook Messenger bot powered by Vapor.
 
 ### GitHub
+
 [Source](https://github.com/FabrizioBrancati/SwiftyBot)
 
 ### Site
+
 [Telegram Demo](https://telegram.me/SwiftyBot)
 
 [Facebook Messenger Demo](http://m.me/SwiftyBotMessenger)
@@ -196,9 +200,11 @@ A simple Telegram & Facebook Messenger bot powered by Vapor.
 An api with random avatars that can be used by designers in their designs.
 
 ### GitHub
+
 [Source](https://github.com/maximedegreve/TinyFaces)
 
 ### Site
+
 [Demo](https://tinyfac.es)
 
 # Geobot
@@ -206,9 +212,11 @@ An api with random avatars that can be used by designers in their designs.
 A simple [Wit.ai](https://wit.ai) chat bot powered by Vapor.
 
 ### GitHub
+
 [Source](https://github.com/vadymmarkov/geobot)
 
 ### Site
+
 [Demo](https://geobot-swift.herokuapp.com)
 
 # HomeKitty
@@ -216,6 +224,7 @@ A simple [Wit.ai](https://wit.ai) chat bot powered by Vapor.
 A crowdsourced HomeKit-compatible accessories database.
 
 ### Site
+
 [HomeKitty](https://homekitty.world)
 
 # ServerSideSwift.racing
@@ -223,9 +232,11 @@ A crowdsourced HomeKit-compatible accessories database.
 Overview of growth statistics on popular server side swift frameworks
 
 ### GitHub
+
 [Source](https://github.com/MartinLasek/serversideswift.racing)
 
 ### Site
+
 [Demo](http://www.serversideswift.racing/)
 
 # Vapor.berlin
@@ -233,8 +244,9 @@ Overview of growth statistics on popular server side swift frameworks
 Website to create and vote topics for the VaporBerlin meetup
 
 ### GitHub
+
 [Source](https://github.com/MartinLasek/vaporberlinBE)
 
 ### Site
-[Demo](http://vapor.berlin/#/)
 
+[Demo](http://vapor.berlin/#/)

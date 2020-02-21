@@ -2,14 +2,16 @@
 
 Remove whichever sections of the template you do not need and all things labeled [REMOVE]
 
-------------------------------------------------------------------------------------------------------
-                                                                              Bug [REMOVE]
-------------------------------------------------------------------------------------------------------
+---
 
-* Vapor Version: 
-* OS: 
-* OS Version: 
-* Vapor Toolbox Version:
+                                                                              Bug [REMOVE]
+
+---
+
+- Vapor Version:
+- OS:
+- OS Version:
+- Vapor Toolbox Version:
 
 ### Expected Behavior
 
@@ -23,19 +25,23 @@ Remove whichever sections of the template you do not need and all things labeled
 
 [REMOVE] Imagine someone is explaining the bug to you: what information do you need to be able to re-create it?
 
-------------------------------------------------------------------------------------------------------
+---
+
                                                                        Security Issue [REMOVE]
-------------------------------------------------------------------------------------------------------
+
+---
 
 [REMOVE] If you find a security vulnerability, please contact [security@vapor.codes](security@vapor.codes) as soon as possible. Please do not report the vulnerability here as it is a public forum
 
-------------------------------------------------------------------------------------------------------
+---
+
                                                    Feature, Enhancement, or Optimization [REMOVE]
-------------------------------------------------------------------------------------------------------
+
+---
 
 ## Name of Feature
 
-* Author(s): [Developer](https://github.com/<your-username>)
+- Author(s): [Developer](https://github.com/<your-username>)
 
 ### Introduction
 

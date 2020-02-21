@@ -31,4 +31,4 @@ Pull requests without adequate testing may be delayed. Please add tests alongsid
 
 ## Slack
 
-Join us in the #development channel in slack, for questions and discussions. 
+Join us in the #development channel in slack, for questions and discussions.
