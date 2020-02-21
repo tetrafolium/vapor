@@ -11,7 +11,7 @@ class FormDataTests: XCTestCase {
         ("testHolistic", testHolistic),
         ("testNested", testNested),
         ("testArray", testArray),
-        ("testPlusEncoding", testPlusEncoding),
+        ("testPlusEncoding", testPlusEncoding)
     ]
     
     override func setUp() {
@@ -109,7 +109,7 @@ class FormDataTests: XCTestCase {
     }
 }
 
-fileprivate func XCTAssertEqualsAny<T: Equatable>(_ input: T, options: T...) {
+private func XCTAssertEqualsAny<T: Equatable>(_ input: T, options: T...) {
     if options.contains(input) { return }
     print("\(input) does not equal any of \(options)")
 }

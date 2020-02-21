@@ -6,7 +6,6 @@ public enum SecurityLayer {
     case tls(TLS.Context)
 }
 
-
 extension String {
     var port: Port {
         return isSecure ? 443 : 80

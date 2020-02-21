@@ -25,7 +25,7 @@ class FileManagerTests: XCTestCase {
     func testReadsFromNonExistingFile() throws {
         let filename = "/nonsene/doesntExist.txt"
         do {
-            let _ = try FileManager.readBytesFromFile(filename)
+            _ = try FileManager.readBytesFromFile(filename)
             XCTFail("Should never reach here")
         } catch DataFileError.load {
             // We're happy here

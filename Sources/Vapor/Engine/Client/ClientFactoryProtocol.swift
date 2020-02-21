@@ -16,7 +16,6 @@ public protocol ClientFactoryProtocol: Responder {
     ) throws -> ClientProtocol
 }
 
-
 // MARK: Convenience
 
 extension ClientFactoryProtocol {

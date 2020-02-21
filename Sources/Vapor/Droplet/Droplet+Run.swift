@@ -8,7 +8,7 @@ extension Droplet {
     }
 
     /// Runs the Droplet's commands, defaulting to serve.
-    public func run() throws -> Never  {
+    public func run() throws -> Never {
         do {
             try runCommands()
         } catch CommandError.general(let error) {

@@ -16,7 +16,6 @@ final class UserController: ResourceRepresentable {
         ])
     }
 
-
     /**
         Create a new instance.
      */
@@ -25,7 +24,6 @@ final class UserController: ResourceRepresentable {
             "controller": "MyController.store"
         ])
     }
-
 
     /**
         Show an instance.
@@ -70,7 +68,6 @@ final class UserController: ResourceRepresentable {
             "controller": "MyController.destroyAll"
         ])
     }
-
 
     func options(request: Request) throws -> ResponseRepresentable {
         return try JSON(node: [

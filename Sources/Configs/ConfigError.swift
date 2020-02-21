@@ -1,4 +1,3 @@
-
 /// Typical errors that may happen
 /// during the parsing of Vapor json
 /// configuration files.

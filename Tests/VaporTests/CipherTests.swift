@@ -15,8 +15,6 @@ class CipherTests: XCTestCase {
             iv: nil,
             encoding: .base64
         )
-
-        
         
         let secret = "vapor"
 

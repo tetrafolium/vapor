@@ -27,6 +27,6 @@ final class User: Parameterizable, NodeConvertible {
     }
 
     func makeNode(in context: Context?) throws -> Node {
-        return try  Node(node:["name": name])
+        return try  Node(node: ["name": name])
     }
 }

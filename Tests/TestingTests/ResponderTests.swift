@@ -3,7 +3,6 @@ import HTTP
 import Testing
 import XCTest
 
-
 class ResponderTests: XCTestCase {
     override func setUp() {
         Testing.onFail = XCTFail
@@ -12,10 +11,10 @@ class ResponderTests: XCTestCase {
 
     func testSee() throws {
         let drop = try Droplet()
-        drop.get("foo") { req in
+        drop.get("foo") { _ in
             return "bar"
         }
-        drop.get("json") { req in
+        drop.get("json") { _ in
             return try JSON(node: [
                 "hello": "world",
                 "nested": ["1", "2"],

@@ -21,7 +21,7 @@ extension StructuredData {
     */
     internal func hydratedEnv() -> StructuredData? {
         switch self {
-        case .null, .number(_), .bool(_), .bytes(_), .date(_):
+        case .null, .number, .bool, .bytes, .date:
             return self
         case let .object(ob):
             guard !ob.isEmpty else { return self }

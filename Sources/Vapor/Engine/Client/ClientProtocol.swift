@@ -21,7 +21,6 @@ public struct Proxy {
     var securityLayer: SecurityLayer
 }
 
-
 // MARK: Convenience
 
 extension ClientProtocol {
@@ -38,4 +37,3 @@ extension ClientProtocol {
         )
     }
 }
-

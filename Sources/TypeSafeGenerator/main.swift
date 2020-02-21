@@ -17,7 +17,7 @@ if CommandLine.arguments.count < 2 {
 let path = CommandLine.arguments[1].replacingOccurrences(of: "XcodeProject", with: "")
 let url = URL(fileURLWithPath: path + "/Sources/TypeSafeRouting/Generated.swift")
 
-do{
+do {
     let lines = code.characters.split(separator: "\n").count
     let functions = code.components(separatedBy: "func").count - 1
 
@@ -36,4 +36,3 @@ do{
 #else
     print("Linux not supported by generator.")
 #endif
-

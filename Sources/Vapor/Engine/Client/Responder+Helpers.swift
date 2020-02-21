@@ -101,7 +101,6 @@ extension Responder {
         return try request(.put, uri, query: query, headers, body, through: middleware)
     }
     
-    
     /// Calls `.request(.delete, ...)`
     public func delete(
         _ uri: String,

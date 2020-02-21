@@ -8,7 +8,7 @@ import Cookies
 class SessionsTests: XCTestCase {
     static let allTests = [
         ("testExample", testExample),
-        ("testCustomCookieFactoryWithExpiryDate", testCustomCookieFactoryWithExpiryDate),
+        ("testCustomCookieFactoryWithExpiryDate", testCustomCookieFactoryWithExpiryDate)
     ]
 
     func testExample() throws {

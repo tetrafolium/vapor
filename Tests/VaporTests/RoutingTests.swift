@@ -11,11 +11,11 @@ class RoutingTests: XCTestCase {
     func testMiddlewareMethod() throws {
         let drop = try Droplet()
         drop.group(TestMiddleware()) { test in
-            test.get("foo") { req in
+            test.get("foo") { _ in
                 return "get"
             }
 
-            test.post("foo") { req in
+            test.post("foo") { _ in
                 return "post"
             }
         }
@@ -43,7 +43,7 @@ private final class TestMiddleware: Middleware {
 
 fileprivate final class TestCollectionA: RouteCollection, EmptyInitializable {
     func build(_ builder: RouteBuilder) {
-        builder.get("foo") { req in
+        builder.get("foo") { _ in
             return "bar"
         }
     }
@@ -51,7 +51,7 @@ fileprivate final class TestCollectionA: RouteCollection, EmptyInitializable {
 
 fileprivate final class TestCollectionB: RouteCollection {
     func build(_ builder: RouteBuilder) {
-        builder.get("baz") { req in
+        builder.get("baz") { _ in
             return "bar"
         }
     }

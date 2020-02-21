@@ -1,6 +1,6 @@
 import HTTP
 
-fileprivate let errorView = ErrorView()
+private let errorView = ErrorView()
 
 /// Catches errors and converts them into responses
 /// with a description of the error.
@@ -56,7 +56,6 @@ extension Status {
         }
     }
 }
-
 
 extension JSON {
     fileprivate init(_ error: Error, env: Environment) {
@@ -157,7 +156,6 @@ extension Sequence where Iterator.Element == String {
         return joined(separator: ", ")
     }
 }
-
 
 extension RouterError: AbortError {
     public var status: Status { return Abort.notFound.status }

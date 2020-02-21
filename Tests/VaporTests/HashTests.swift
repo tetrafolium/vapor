@@ -8,7 +8,7 @@ class HashTests: XCTestCase {
         ("testHash", testHash),
         ("testDroplet", testDroplet),
         ("testBCrypt", testBCrypt),
-        ("testDropletBCrypt", testDropletBCrypt),
+        ("testDropletBCrypt", testDropletBCrypt)
     ]
 
     func testHash() throws {

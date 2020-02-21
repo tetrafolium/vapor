@@ -25,7 +25,7 @@ public final class CacheSessions: SessionsProtocol {
         try cache.set(session.identifier, session.data, expiration: expiration)
     }
 
-    public func destroy(identifier: String) throws{
+    public func destroy(identifier: String) throws {
         try cache.delete(identifier)
     }
 

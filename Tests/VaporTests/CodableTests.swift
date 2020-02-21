@@ -81,16 +81,15 @@ class CodableTests: XCTestCase {
         XCTAssertEqual("test", try json.get("opt"))
     }
 
-    static let allTests: [(String, (CodableTests) -> () throws -> ())] = [
+    static let allTests: [(String, (CodableTests) -> () throws -> Void)] = [
         ("testDecodeJSONBodyRaw", testDecodeJSONBodyRaw),
         ("testDecodeJSONBodyInterop", testDecodeJSONBodyInterop),
         ("testDecodeFailsWithMissingField", testDecodeFailsWithMissingField),
         ("testEncodeJSONBodyInterop", testEncodeJSONBodyInterop),
-        ("testMakeResponse", testMakeResponse),
+        ("testMakeResponse", testMakeResponse)
     ]
     #else
-    static let allTests: [(String, (CodableTests) -> () throws -> ())] = [
+    static let allTests: [(String, (CodableTests) -> () throws -> Void)] = [
     ]
     #endif
 }
-

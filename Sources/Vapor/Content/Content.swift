@@ -53,13 +53,13 @@ public final class Content {
 }
 
 extension Content {
-    public func get<T : NodeInitializable>(
+    public func get<T: NodeInitializable>(
         _ indexers: PathIndexer...)
         throws -> T {
             return try get(indexers)
     }
 
-    public func get<T : NodeInitializable>(
+    public func get<T: NodeInitializable>(
         _ indexers: [PathIndexer])
         throws -> T {
             let value = self[indexers] ?? .null

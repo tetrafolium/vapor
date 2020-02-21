@@ -22,7 +22,7 @@ enum Parameter {
 
     var isPath: Bool {
         switch self {
-        case.path(_):
+        case.path:
             return true
         default:
             return false
@@ -31,7 +31,7 @@ enum Parameter {
 
     var isWildcard: Bool {
         switch self {
-        case.wildcard(_):
+        case.wildcard:
             return true
         default:
             return false

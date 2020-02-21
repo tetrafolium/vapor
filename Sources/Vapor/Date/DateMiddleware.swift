@@ -3,15 +3,15 @@ import HTTP
 import Core
 import libc
 
-fileprivate let DAY_NAMES = [
+private let DAY_NAMES = [
     "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
 ]
 
-fileprivate let MONTH_NAMES = [
+private let MONTH_NAMES = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 ]
 
-fileprivate let NUMBERS = [
+private let NUMBERS = [
     "00", "01", "02", "03", "04", "05", "06", "07", "08", "09",
     "10", "11", "12", "13", "14", "15", "16", "17", "18", "19",
     "20", "21", "22", "23", "24", "25", "26", "27", "28", "29",
@@ -24,7 +24,7 @@ fileprivate let NUMBERS = [
     "90", "91", "92", "93", "94", "95", "96", "97", "98", "99"
 ]
 
-fileprivate var cachedTimeComponents: (key: time_t, components: libc.tm)?
+private var cachedTimeComponents: (key: time_t, components: libc.tm)?
 
 let secondsInDay = 60 * 60 * 24
 

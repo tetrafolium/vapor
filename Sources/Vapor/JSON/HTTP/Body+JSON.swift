@@ -9,7 +9,6 @@ extension Body {
 
 extension JSON: BodyRepresentable {
     public func makeBody() -> Body {
-        if let body = try? Body(self) { return body }
-        else { return .data([]) }
+        if let body = try? Body(self) { return body } else { return .data([]) }
     }
 }

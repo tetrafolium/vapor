@@ -14,7 +14,7 @@ let package = Package(
         Target(name: "Cache"),
         Target(name: "Sessions", dependencies: ["Cache"]),
         Target(name: "Configs"),
-        Target(name: "Testing", dependencies: ["Vapor"]),
+        Target(name: "Testing", dependencies: ["Vapor"])
 
         // Development and Testing
         // Target(name: "Development", dependencies: ["Vapor"]),
@@ -37,7 +37,7 @@ let package = Package(
         .Package(url: "https://github.com/vapor/multipart.git", majorVersion: 2),
 
         // Swift implementation of the BCrypt password hashing function
-        .Package(url: "https://github.com/vapor/bcrypt.git", majorVersion: 1),
+        .Package(url: "https://github.com/vapor/bcrypt.git", majorVersion: 1)
     ],
     exclude: [
         "Sources/Development",

@@ -25,7 +25,7 @@ class ContentTests: XCTestCase {
         ("testFormURLEncodedEdge", testFormURLEncodedEdge),
         ("testFormURLEncodedDict", testFormURLEncodedDict),
         ("testSplitString", testSplitString),
-        ("testEmptyQuery", testEmptyQuery),
+        ("testEmptyQuery", testEmptyQuery)
     ]
 
     func testRequestSetJSONBody() throws {
@@ -127,7 +127,7 @@ class ContentTests: XCTestCase {
 
     func testContentLazyLoad() throws {
         let content = Content()
-        var json: JSON? = nil
+        var json: JSON?
         content.append { () -> JSON in
             let js = JSON(["a": .string("a")])
             json = js

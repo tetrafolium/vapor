@@ -10,7 +10,7 @@ class ProviderTests: XCTestCase {
         ("testOverride", testOverride),
         ("testInitialized", testInitialized),
         ("testProviderRepository", testProviderRepository),
-        ("testCheckoutsDirectory", testCheckoutsDirectory),
+        ("testCheckoutsDirectory", testCheckoutsDirectory)
     ]
 
     override func setUp() {
@@ -111,7 +111,6 @@ private final class FastServer: ServerProtocol {
     var port: Int
     var securityLayer: SecurityLayer
 
-
     init(hostname: String, port: Transport.Port, _ securityLayer: SecurityLayer) throws {
         host = hostname
         self.port = Int(port)
@@ -152,7 +151,6 @@ private final class SlowServer: ServerProtocol {
     var host: String
     var port: Int
     var securityLayer: SecurityLayer
-
 
     init(hostname: String, port: Transport.Port, _ securityLayer: SecurityLayer) throws {
         host = hostname

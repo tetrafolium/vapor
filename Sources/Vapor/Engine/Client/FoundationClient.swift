@@ -18,7 +18,7 @@ public final class FoundationClient: ClientProtocol {
         port: Port,
         securityLayer: SecurityLayer,
         proxy: Proxy?
-    ) throws{
+    ) throws {
         self.hostname = hostname
         self.port = port
         self.securityLayer = securityLayer
@@ -48,7 +48,6 @@ public final class FoundationClient: ClientProtocol {
 }
 
 public typealias FoundationClientFactory = ClientFactory<FoundationClient>
-
 
 extension SecurityLayer {
     public var scheme: String {

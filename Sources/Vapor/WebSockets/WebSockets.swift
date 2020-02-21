@@ -6,7 +6,6 @@ import TLS
 public typealias WebSocket = WebSockets.WebSocket
 @_exported import func Core.background
 
-
 public final class WebSocketFactory {
     public static let shared = WebSocketFactory()
     
@@ -70,4 +69,3 @@ extension ClientFactoryProtocol {
         return  WebSocketFactory.shared
     }
 }
-

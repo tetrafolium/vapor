@@ -11,7 +11,7 @@ extension Body: CustomStringConvertible {
         return [
             "self.add(.\(signature.method), \(path)) { request in",
             innerBody.indented,
-            "}",
+            "}"
         ].joined(separator: "\n")
     }
 

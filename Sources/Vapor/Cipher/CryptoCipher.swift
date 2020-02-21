@@ -52,7 +52,6 @@ extension CryptoCipher: ConfigInitializable {
             throw ConfigError.missingFile("crypto")
         }
 
-
         // Encoding
         guard let encodingString = crypto["cipher", "encoding"]?.string else {
             throw ConfigError.missing(

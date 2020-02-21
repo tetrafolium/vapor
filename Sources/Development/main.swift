@@ -69,17 +69,13 @@ final class TestUser: Model, Auth.User {
     }
 }
 
-
 let drop = Droplet(workDir: workDir)
 
 drop.hash = CryptoHasher(method: .sha512, defaultKey: [])
 drop.cipher = CryptoCipher(method: .aes128(.cbc), defaultKey: "asdfasdfasdfasdf".bytes, defaultIV: nil)
 
-
-
 let auth = AuthMiddleware(user: TestUser.self)
 drop.addConfigurable(middleware: auth, name: "auth")
-
 
 let 😀 = Response(status: .ok)
 
@@ -88,7 +84,6 @@ import Node
 
 let sessions = MemorySessions()
 let s = SessionsMiddleware(sessions: sessions)
-
 
 drop.post("remember") { req in
     guard let name = req.data["name"]?.string else {
@@ -130,12 +125,11 @@ drop.resource("users", users)
 
 let hashed = try drop.hash.make("test")
 
-
 enum FakeError: Error {
     case fake
 }
 
-drop.get("500") { req in
+drop.get("500") { _ in
     throw FakeError.fake
 }
 
@@ -203,13 +197,13 @@ drop.grouped(protect).group("secure") { secure in
     }
 }
 
-drop.get("users", Int.self) { request, userId in
+drop.get("users", Int.self) { _, userId in
     return "You requested User #\(userId)"
 }
 
-//MARK: Basic
+// MARK: Basic
 
-drop.get { request in
+drop.get { _ in
     return try drop.view.make("welcome", [
         "name": "World"
     ])
@@ -248,7 +242,7 @@ drop.delete("cache") { request in
     return "Deleted"
 }
 
-drop.get("client-socket") { req in
+drop.get("client-socket") { _ in
     // TODO: Find way to support multiple droplets while still having concrete reference to host / port. This will only work on one droplet ...
     let host = drop.config["servers", 0, "host"]?.string ?? "localhost"
     let port = drop.config["servers", 0, "port"]?.int ?? 80
@@ -266,7 +260,7 @@ drop.get("client-socket") { req in
     return "Beginning client socket test, check your console ..."
 }
 
-drop.socket("server-socket-responder") { req, ws in
+drop.socket("server-socket-responder") { _, ws in
     let top = 10
     for i in 1...top {
         sleep(1)
@@ -294,7 +288,6 @@ drop.get("spotify-artists") { req in
         throw Abort.custom(status: .badRequest, message: "Could not parse response")
     }
 
-
     return try JSON(node: names)
 }
 
@@ -309,7 +302,7 @@ drop.get("pokemon") { req in
     return names.joined(separator: "\n")
 }
 
-drop.get("pokemon-multi") { [weak drop] req in
+drop.get("pokemon-multi") { [weak drop] _ in
     return Response { chunker in
         /**
          Advanced usage, maintain connection
@@ -332,7 +325,7 @@ drop.get("test") { request in
     return "123"
 }
 
-drop.socket("socket") { request, ws in
+drop.socket("socket") { _, ws in
     try ws.send("WebSocket Connected :)")
 
     ws.onText = { ws, text in
@@ -354,11 +347,11 @@ drop.socket("socket") { request, ws in
     }
 }
 
-//MARK: Resource
+// MARK: Resource
 
 drop.resource("users", UserController())
 
-//MARK: Request data
+// MARK: Request data
 
 drop.post("jsondata") { request in
     print(request.json?["hi"])
@@ -367,7 +360,7 @@ drop.post("jsondata") { request in
 
 // MARK: Type safe routing
 
-drop.get("test", Int.self, String.self) { request, int, string in
+drop.get("test", Int.self, String.self) { _, int, string in
     return try JSON(node: [
         "message": "Int \(int) String \(string)"
     ])
@@ -388,9 +381,9 @@ drop.get("users-test") { req in
     return "Hello \(friendName)"
 }
 
-//MARK: Json
+// MARK: Json
 
-drop.get("json") { request in
+drop.get("json") { _ in
     return try JSON(node: [
         "number": 123,
         "text": "unicorns",
@@ -415,24 +408,24 @@ drop.post("form") { request in
     return "Hello \(name)"
 }
 
-drop.get("redirect") { request in
+drop.get("redirect") { _ in
     return Response(redirect: "http://qutheory.io:8001")
 }
 
 drop.group("abort") { group in
-    group.get("400") { request in
+    group.get("400") { _ in
         throw Abort.badRequest
     }
 
-    group.get("404") { request in
+    group.get("404") { _ in
         throw Abort.notFound
     }
 
-    group.get("420") { request in
+    group.get("420") { _ in
         throw Abort.custom(status: .enhanceYourCalm, message: "Enhance your calm")
     }
 
-    group.get("500") { request in
+    group.get("500") { _ in
         throw Abort.serverError
     }
 }
@@ -441,11 +434,11 @@ enum Error: Swift.Error {
     case Unhandled
 }
 
-drop.get("error") { request in
+drop.get("error") { _ in
     throw Error.Unhandled
 }
 
-//MARK: Session
+// MARK: Session
 
 drop.post("session") { request in
     guard let name = request.data["name"]?.string else {
@@ -468,13 +461,12 @@ drop.get("session") { request in
     This example is in the docs. If it changes,
     make sure to update the Response section.
  */
-drop.get("cookie") { request in
+drop.get("cookie") { _ in
     var response = Response(status: .ok, body: "Cookie set")
     response.cookies["id"] = "123"
 
     return response
 }
-
 
 drop.get("cookies") { request in
     var response = try JSON(node: [
@@ -521,7 +513,7 @@ drop.post("validation") { request in
     return try employee.makeJSON()
 }
 
-//MARK: Forms
+// MARK: Forms
 
 drop.get("multipart-image") { _ in
     var response = "<form method='post' action='/multipart-image/' ENCTYPE='multipart/form-data'>"
@@ -640,12 +632,12 @@ drop.post("multipart-print") { request in
     ])
 }
 
-//MARK: Chunked
+// MARK: Chunked
 
-drop.get("chunked") { request in
+drop.get("chunked") { _ in
     return Response(headers: ["Content-Type": "text/plain"]) { stream in
         try stream.send("Counting:")
-        for i in 1 ..< 10{
+        for i in 1 ..< 10 {
             sleep(1)
             try stream.send(i)
         }
@@ -655,8 +647,8 @@ drop.get("chunked") { request in
 
 struct TestCollection: RouteCollection, EmptyInitializable {
     typealias Wrapped = Responder
-    func build<Builder : RouteBuilder>(_ builder: Builder) where Builder.Value == Responder {
-        builder.get("test") { request in
+    func build<Builder: RouteBuilder>(_ builder: Builder) where Builder.Value == Responder {
+        builder.get("test") { _ in
             return "Test Collection"
         }
     }
@@ -664,7 +656,7 @@ struct TestCollection: RouteCollection, EmptyInitializable {
 
 drop.grouped("test-collection").collection(TestCollection.self)
 
-drop.get("async") { request in
+drop.get("async") { _ in
     return try Response.async { portal in
         _ = try background {
             do {
@@ -690,5 +682,5 @@ let config = try TLS.Config(
 
 drop.run(servers: [
     "test": ("gertrude.codes", 8080, .none),
-    "secure": ("gertrude.codes", 8443, .tls(config)),
+    "secure": ("gertrude.codes", 8443, .tls(config))
 ])

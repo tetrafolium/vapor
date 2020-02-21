@@ -16,9 +16,8 @@ extension Config {
             file: "droplet",
             keyPath: ["commands"],
             as: Command.self
-        ) { config in
+        ) { _ in
             return [Command]()
         }
     }
 }
-
