@@ -16,13 +16,13 @@ body {
 
 
 a {
-	color: #92A8D1;
+	color: #92a8d1;
 	text-decoration: none;
 	border-bottom: 1px dotted;
 }
 
 a:hover {
-	color: #F7CAC9;
+	color: #f7cac9;
 }
 
 div.wrapper {
