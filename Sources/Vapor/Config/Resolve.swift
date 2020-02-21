@@ -33,7 +33,7 @@ extension Config {
         let chosenKey = "\(unique)-\(chosen)"
         
         // access the configurable items and 
-        // retreive the chosen one or fail.
+        // retrieve the chosen one or fail.
         guard
             let configurable = self.configurable[chosenKey],
             let c = try configurable(self) as? C
