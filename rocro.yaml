@@ -2,7 +2,7 @@ inspecode:
 
   cpd:                  ## for Swift
     options: [ --skip-lexical-errors ]
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   csscomb:              ## for CSS
     auto-fix: true
@@ -18,7 +18,7 @@ inspecode:
     thresholds: { num-issues: 0 }
 
   jscpd:                ## for CSS HTML Markdown Shell Swift
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 16 }
 
   jshint:               ## for HTML
     options:
@@ -38,14 +38,14 @@ inspecode:
     auto-fix: false
     thresholds: { num-issues: 39 }
 
-  prettier:             ## for CSS HTML JavaScript Markdown TypeScript
+  prettier:             ## for CSS HTML Markdown
     options:
       --use-tabs
     auto-fix: true
     thresholds: { num-issues: 8 }
 
   sass-lint:            ## for CSS
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   scss-lint:            ## for CSS
     thresholds: { num-issues: 0 }
@@ -55,7 +55,7 @@ inspecode:
 
   stylelint:            ## for CSS HTML Markdown
     auto-fix: true
-    thresholds: { num-issues: 999 }
+    thresholds: { num-issues: 0 }
 
   swiftlint:            ## for Swift
     # config-file: .swiftlint.yml   # (auto-detect)
