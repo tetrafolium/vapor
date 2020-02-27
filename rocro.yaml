@@ -1,6 +1,7 @@
 inspecode:
 
   cpd:                  ## for Swift
+    options: [ --skip-lexical-errors ]
     thresholds: { num-issues: 999 }
 
   csscomb:              ## for CSS
