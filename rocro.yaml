@@ -18,6 +18,9 @@ inspecode:
       num-issues: 0
 
   jshint:               ## for HTML
+    options:
+      --extra-ext: [ '.html' ]
+      --extract:   auto
     thresholds:
       num-issues: 0
 
