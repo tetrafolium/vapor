@@ -2,80 +2,65 @@ inspecode:
 
   csscomb:              ## for CSS
     auto-fix: true
-    thresholds:
-      num-issues: 1
+    thresholds: { num-issues: 1 }
 
   csslint:              ## for CSS
-    thresholds:
-      num-issues: 14
+    thresholds: { num-issues: 14 }
 
   grep:                 ## for any-languages
-    thresholds:
-      num-issues: 6
+    thresholds: { num-issues: 6 }
 
   htmlhint:             ## for HTML
-    thresholds:
-      num-issues: 0
+    thresholds: { num-issues: 0 }
 
   jshint:               ## for HTML
     options:
       --extra-ext: [ '.html' ]
       --extract:   auto
-    thresholds:
-      num-issues: 0
+    thresholds: { num-issues: 0 }
 
   markdownlint:         ## for Markdown
     options:
-    thresholds:
-      num-issues: 319
+    thresholds: { num-issues: 319 }
 
   misspell:             ## for any-languages
     auto-fix: true
-    thresholds:
-      num-issues: 3
+    thresholds: { num-issues: 3 }
 
   phpcs:                ## for CSS
     auto-fix: false
-    thresholds:
-      num-issues: 39
+    thresholds: { num-issues: 39 }
 
   prettier:             ## for CSS HTML JavaScript Markdown TypeScript
     options:
       --use-tabs
     auto-fix: true
-    thresholds:
-      num-issues: 8
+    thresholds: { num-issues: 8 }
 
   scss-lint:            ## for CSS
-    thresholds:
-      num-issues: 0
+    thresholds: { num-issues: 0 }
 
   shellcheck:           ## for Shell
-    thresholds:
-      num-issues: 17
+    thresholds: { num-issues: 17 }
 
   swiftlint:
     # config-file: .swiftlint.yml   # (auto-detect)
   - auto-fix: true
-    thresholds:
-      num-issues: 225
+    thresholds: { num-issues: 225 }
 
   tailor:               ## for Swift
     options:
       --except:
       - trailing-whitespace     # 1437 issues
       - function-whitespace     #  278 issues
-    thresholds:
-      num-issues: 98
+    thresholds: { num-issues: 98 }
 
   tidy:                 ## for HTML
     options:
       -indent: null
       --indent-with-tabs: true
     auto-fix: true
-    thresholds:
-      num-issues: 2
+    thresholds: { num-issues: 2 }
 
   unused:               ## for Shell
-    thresholds:
-      num-issues: 0
+    thresholds: { num-issues: 0 }
