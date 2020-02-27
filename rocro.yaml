@@ -1,5 +1,8 @@
 inspecode:
 
+  cpd:                  ## for Swift
+    thresholds: { num-issues: 999 }
+
   csscomb:              ## for CSS
     auto-fix: true
     thresholds: { num-issues: 1 }
@@ -12,6 +15,9 @@ inspecode:
 
   htmlhint:             ## for HTML
     thresholds: { num-issues: 0 }
+
+  jscpd:                ## for CSS HTML Markdown Shell Swift
+    thresholds: { num-issues: 999 }
 
   jshint:               ## for HTML
     options:
@@ -37,13 +43,20 @@ inspecode:
     auto-fix: true
     thresholds: { num-issues: 8 }
 
+  sass-lint:            ## for CSS
+    thresholds: { num-issues: 999 }
+
   scss-lint:            ## for CSS
     thresholds: { num-issues: 0 }
 
   shellcheck:           ## for Shell
     thresholds: { num-issues: 17 }
 
-  swiftlint:
+  stylelint:            ## for CSS HTML Markdown
+    auto-fix: true
+    thresholds: { num-issues: 999 }
+
+  swiftlint:            ## for Swift
     # config-file: .swiftlint.yml   # (auto-detect)
   - auto-fix: true
     thresholds: { num-issues: 225 }
