@@ -11,6 +11,9 @@ inspecode:
   csslint:              ## for CSS
     thresholds: { num-issues: 14 }
 
+  fossology:            ## for any-languages
+    thresholds: { num-issues: 999 }
+
   grep:                 ## for any-languages
     thresholds: { num-issues: 6 }
 
