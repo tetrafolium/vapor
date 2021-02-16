@@ -58,7 +58,7 @@ public final class Droplet {
     /// Render static and templated views.
     public let view: ViewRenderer
 
-    /// Store and retreive key:value
+    /// Store and retrieve key:value
     /// pair information.
     public let cache: CacheProtocol
     
