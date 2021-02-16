@@ -11,7 +11,7 @@ class MiddlewareTests: XCTestCase {
         ("testConfigDateProvided", testConfigDateProvided),
         ("testMultiple", testMultiple),
         ("testConfigClient", testConfigClient),
-        ("testConfigClientNotEnabled", testConfigClientNotEnabled),
+        ("testConfigClientNotEnabled", testConfigClientNotEnabled)
     ]
 
     func testConfigDate() throws {

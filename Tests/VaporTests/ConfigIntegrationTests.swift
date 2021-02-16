@@ -6,7 +6,7 @@ class ConfigIntegrationTests: XCTestCase {
        ("testSimple", testSimple),
        ("testNesting", testNesting),
        ("testEnvironmentCascading", testEnvironmentCascading),
-       ("testEnvironmentCascadingNesting", testEnvironmentCascadingNesting),
+       ("testEnvironmentCascadingNesting", testEnvironmentCascadingNesting)
     ]
 
     var workDir: String {

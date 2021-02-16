@@ -44,7 +44,6 @@ extension Signature {
             d << " "
         }
 
-
         d << "    This route will run for any \(method.uppercase) request"
         d << "    to a path that matches:"
         d << ""
@@ -53,9 +52,9 @@ extension Signature {
 
         for parameter in parameters {
             switch parameter {
-            case .path(_):
+            case .path:
                 d <<< "<path>/"
-            case .wildcard(_):
+            case .wildcard:
                 d <<< "{wildcard}/"
             }
         }

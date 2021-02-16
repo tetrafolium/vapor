@@ -121,7 +121,7 @@ extension RouteBuilder {
         if let about = resource.aboutItem {
             item(.options, about)
         } else {
-            item(.options) { request, model in
+            item(.options) { _, _ in
                 return try JSON(node: [
                     "resource": "\(path)/:\(pathId)",
                     "methods": try JSON(node: itemMethods.map { $0.description })
@@ -132,7 +132,7 @@ extension RouteBuilder {
         if let about = resource.aboutMultiple {
             multiple(.options, about)
         } else {
-            multiple(.options) { request in
+            multiple(.options) { _ in
                 let methods: [String] = multipleMethods.map { $0.description }
                 return try JSON(node: [
                     "resource": path,
@@ -145,7 +145,7 @@ extension RouteBuilder {
     public func resource<Model>(
         _ path: String,
         _ type: Model.Type = Model.self,
-        closure: (Resource<Model>) -> ()
+        closure: (Resource<Model>) -> Void
     ) {
         let resource = Resource<Model>()
         closure(resource)

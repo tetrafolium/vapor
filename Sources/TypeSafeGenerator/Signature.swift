@@ -82,7 +82,7 @@ extension Signature {
                 var string = "_ \(parameter.name): "
 
                 switch parameter {
-                case .path(_):
+                case .path:
                     string <<< "String"
                 case .wildcard(let wildcard):
                     string <<< "\(wildcard.generic).Type"

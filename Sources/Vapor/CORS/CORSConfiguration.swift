@@ -62,7 +62,6 @@ public struct CORSConfiguration {
         allowedHeaders: ["Accept", "Authorization", "Content-Type", "Origin", "X-Requested-With"]
     )
 
-
     /// Setting that controls which origin values are allowed.
     public let allowedOrigin: AllowOriginSetting
 

@@ -19,7 +19,7 @@ class DropletTests: XCTestCase {
         ("testDropletProxy", testDropletProxy),
         ("testWebsockets", testWebsockets),
         ("test404", test404),
-        ("testErrorMiddleware404", testErrorMiddleware404),
+        ("testErrorMiddleware404", testErrorMiddleware404)
         // ("testWebsocketsTLS", testWebsocketsTLS)
     ]
 
@@ -82,7 +82,7 @@ class DropletTests: XCTestCase {
         config.arguments = ["vapor", "serve", "--port=8523"]
         let drop = try Droplet(config)
 
-        drop.get("foo") { req in
+        drop.get("foo") { _ in
             return "bar"
         }
         
@@ -102,7 +102,7 @@ class DropletTests: XCTestCase {
 
     func testHeadRequest() throws {
         let drop = try Droplet()
-        drop.get("foo") { req in
+        drop.get("foo") { _ in
             return "Hi, I'm a body"
         }
 

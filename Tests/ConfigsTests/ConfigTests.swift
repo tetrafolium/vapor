@@ -7,7 +7,7 @@ class ConfigTests: XCTestCase {
         ("testLoad", testLoad),
         ("testExample", testExample),
         ("testEmpty", testEmpty),
-        ("testConversions", testConversions),
+        ("testConversions", testConversions)
     ]
     
     func testLoad() throws {

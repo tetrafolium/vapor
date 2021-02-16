@@ -22,7 +22,7 @@ private class DummyLogger: LogProtocol {
 
 class LogTests: XCTestCase {
     static let allTests = [
-        ("testDummyLogger", testDummyLogger),
+        ("testDummyLogger", testDummyLogger)
     ]
 
     func testDummyLogger() {

@@ -1,4 +1,4 @@
-public typealias OnFail = (String, StaticString, UInt) -> ()
+public typealias OnFail = (String, StaticString, UInt) -> Void
 
 public var onFail: OnFail = { message, file, line in
     print()

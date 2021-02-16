@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "Configs", targets: ["Configs"]),
         .library(name: "Sessions", targets: ["Sessions"]),
         .library(name: "Testing", targets: ["Testing"]),
-        .library(name: "Vapor", targets: ["Vapor"]),
+        .library(name: "Vapor", targets: ["Vapor"])
     ],
     dependencies: [
         // Swift implementation of the BCrypt password hashing function
@@ -36,7 +36,7 @@ let package = Package(
         .package(url: "https://github.com/vapor/multipart.git", .upToNextMajor(from: "2.1.0")),
         
         // A type safe routing package including HTTP and TypeSafe routers.
-        .package(url: "https://github.com/vapor/routing.git", .upToNextMajor(from: "2.1.0")),
+        .package(url: "https://github.com/vapor/routing.git", .upToNextMajor(from: "2.1.0"))
     ],
     targets: [
         .target(name: "Cache", dependencies: ["Node"]),
@@ -62,6 +62,6 @@ let package = Package(
             "SMTP",
             "WebSockets"
         ]),
-        .testTarget(name: "VaporTests", dependencies: ["Vapor", "Testing"]),
+        .testTarget(name: "VaporTests", dependencies: ["Vapor", "Testing"])
     ]
 )

@@ -33,7 +33,7 @@ class Generator {
             "import HTTPRouting",
             "import WebSockets",
             " ",
-            "extension Routing.RouteBuilder where Value == HTTP.Responder {",
+            "extension Routing.RouteBuilder where Value == HTTP.Responder {"
         ]
         for function in functions {
             generated.append(function.description.indented)
@@ -57,7 +57,6 @@ class Generator {
         
         return permutations
     }
-
 
     private func permutate(_ array: [[Parameter]]) -> [[Parameter]] {
         var result: [[Parameter]] = []

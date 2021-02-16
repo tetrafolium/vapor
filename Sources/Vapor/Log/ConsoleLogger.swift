@@ -38,7 +38,7 @@ extension ConsoleLogger: ConfigInitializable {
 extension LogLevel {
     var consoleStyle: ConsoleStyle {
         switch self {
-        case .debug, .verbose, .custom(_):
+        case .debug, .verbose, .custom:
             return .plain
         case .info:
             return .info

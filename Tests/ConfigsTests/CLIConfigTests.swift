@@ -5,7 +5,7 @@ import Node
 class CLIConfigTests: XCTestCase {
     static let allTests = [
         ("testCLI", testCLI),
-        ("testBools", testBools),
+        ("testBools", testBools)
     ]
 
     func testCLI() throws {

@@ -9,7 +9,7 @@ class SessionsProtocolTests: XCTestCase {
     static let allTests = [
         ("testMemory", testMemory),
         ("testCache", testCache),
-        ("testCacheObject", testCacheObject),
+        ("testCacheObject", testCacheObject)
     ]
     
     override func setUp() {

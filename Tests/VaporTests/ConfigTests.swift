@@ -78,7 +78,7 @@ class ConfigTests: XCTestCase {
     static let allTests = [
         ("testConfigAvailableType", testConfigAvailableType),
         ("testConfigUnavailableType", testConfigUnavailableType),
-        ("testConfigUnavailableType", testConfigUnavailableType),
+        ("testConfigUnavailableType", testConfigUnavailableType)
     ]
 }
 

@@ -19,7 +19,6 @@ class ViewTests: XCTestCase {
         let view = try r.make("foo")
         XCTAssertEqual(view.data.makeString(), "42")
 
-
         let view2 = try r.make("foo", "context")
         XCTAssertEqual(view2.data.makeString(), "42")
     }
@@ -28,7 +27,6 @@ class ViewTests: XCTestCase {
         let view = View(bytes: "42".makeBytes())
         XCTAssertEqual(view.makeBytes(), "42".makeBytes())
     }
-
 
     func testViewResponse() throws {
         let view = View(bytes: "42 🚀".makeBytes())
@@ -71,8 +69,6 @@ class ViewTests: XCTestCase {
         session.data = Node.object([
             "name": "Vapor"
         ])
-        
-
         
         let view = try drop.view.make("test-template", for: request)
         let string = view.data.makeString()

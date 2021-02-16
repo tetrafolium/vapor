@@ -46,7 +46,7 @@ XCTMain([
     testCase(SessionsTests.allTests),
 
     // Testing
-    testCase(ResponderTests.allTests),
+    testCase(ResponderTests.allTests)
 ])
 
 #endif

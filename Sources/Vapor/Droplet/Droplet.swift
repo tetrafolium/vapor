@@ -88,7 +88,6 @@ public final class Droplet {
         mail: MailProtocol? = nil
     ) throws {
         var config = try config ?? Config()
-        
 
         config.addConfigurable(server: EngineServer.self, name: "engine")
         config.addConfigurable(client: EngineClient.self, name: "engine")

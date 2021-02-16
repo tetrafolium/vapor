@@ -10,7 +10,7 @@ class EnvTests: XCTestCase {
         ("testEmptyDefault", testEmptyDefault),
         ("testNoEnv", testNoEnv),
         ("testEmpty", testEmpty),
-        ("testEnvArray", testEnvArray),
+        ("testEnvArray", testEnvArray)
     ]
     
     func testEnv() {
@@ -24,7 +24,7 @@ class EnvTests: XCTestCase {
         Env.set(TEST_KEY, value: "Hello!")
         XCTAssertEqual(Env.get(TEST_KEY), "Hello!")
 
-        Env.set(TEST_KEY, value:"Aloha!")
+        Env.set(TEST_KEY, value: "Aloha!")
         XCTAssertEqual(Env.get(TEST_KEY), "Aloha!")
 
         Env.set(TEST_KEY, value: "Hola!", replace: false)

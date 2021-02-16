@@ -8,4 +8,3 @@
 public protocol ConfigInitializable {
     init(config: Config) throws
 }
-

@@ -9,7 +9,7 @@ class ConsoleTests: XCTestCase {
         ("testVersionCommand", testVersionCommand),
         ("testCommandFetchArgs", testCommandFetchArgs),
         ("testCommandFetchOptions", testCommandFetchOptions),
-        ("testDefaultServe", testDefaultServe),
+        ("testDefaultServe", testDefaultServe)
     ]
 
     func testCommandRun() throws {
@@ -76,7 +76,6 @@ class ConsoleTests: XCTestCase {
             XCTFail("Command 2 failed to run: \(error)")
         }
     }
-
 
     func testCommandFetchOptions() throws {
         let console = TestConsoleDriver()
@@ -167,7 +166,7 @@ final class TestTwoCommand: Command {
 
 class TestConsoleDriver: ConsoleProtocol {
     var buffer: Bytes
-    let size: (width: Int, height: Int) = (0,0)
+    let size: (width: Int, height: Int) = (0, 0)
 
     init() {
         buffer = []

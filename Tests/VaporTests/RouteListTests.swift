@@ -5,7 +5,7 @@ import HTTP
 class RouteListTests: XCTestCase {
     static let allTests = [
         ("testMakeTable", testMakeTable),
-        ("testLogTable", testLogTable),
+        ("testLogTable", testLogTable)
     ]
 
     func testMakeTable() throws {
