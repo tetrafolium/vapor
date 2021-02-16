@@ -2,7 +2,8 @@
 	box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
 	padding: 0;
 	margin: 0;
 	height: 100%;
@@ -13,7 +14,6 @@ body {
 	color: #333;
 	position: relative;
 }
-
 
 a {
 	color: #92a8d1;
@@ -56,7 +56,6 @@ nav.main ul li {
 	display: inline-block;
 	padding: 0 5px;
 }
-
 
 footer.main {
 	position: absolute;
